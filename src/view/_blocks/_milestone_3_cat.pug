@@ -1,0 +1,54 @@
+include ../_mixins/_CatCards
+block variables
+
+
+section(class="g-section cat")
+	div(class="g-content g-content-cat")
+		div(class="cat-wrapper")
+			div(class="cat-title-wrapper")
+				p(class="cat__small-title") Категории
+				h2(class="cat__main-title") Популярные категории
+			div(class="cat-content")
+				div(class="cat-content-items")
+					-
+						var list = [ 
+							{ 
+								image:"tea-icon", 
+								number: "10",
+								category: "Чай", 
+								price: "от 20 грн", 
+							}, 
+							{ 
+								image:"dish-icon", 
+								number: "11",
+								category: "Еда", 
+								price: "от 300 грн", 
+							}, 
+							{ 
+								image:"snack-icon", 
+								number: "08",
+								category: "Снеки", 
+								price: "от 100 грн", 
+							}, 
+							{ 
+								image:"drink-icon", 
+								number: "14",
+								category: "Напитки", 
+								price: "от 30 грн", 
+							}, 
+							{ 
+								image:"cake-icon", 
+								number: "16",
+								category: "Десерты", 
+								price: "от 150 грн", 
+							}, 
+							{ 
+								image:"ice-cream-icon", 
+								number: "24",
+								category: "Мороженое", 
+								price: "от 120 грн", 
+							}, 
+							]
+					each item in list
+							div(class="cat-content-item")
+								+CatCards(item.image, item.number, item.category, item.price)

@@ -1,0 +1,21 @@
+
+include ../_mixins/_IntroCards
+
+-
+	var list = [
+		{ 
+			image:"./../../images/pumpkin-soup.webp", 
+			name: "Тыквенный суп с карри",
+			category: "Еда", 
+			testimonials: "12 отзывов", 
+		},
+		{
+			image:"./../../images/strawberry-fresh.webp", 
+			name: "Клубничный фреш",
+			category: "Еда", 
+			testimonials: "20 отзывов", 
+		}
+		]
+each item in list
+		div(class="carousel-inner")
+			+IntroCards(item.image, item.name, item.category, item.testimonials)

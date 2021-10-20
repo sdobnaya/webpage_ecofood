@@ -1,0 +1,9 @@
+mixin CatCards(image_url, number, category, price)
+	- mod = mod || ''
+	div(class="cat-item-img-wrap")
+		div(class="svg-" + image_url )
+			svg(class="cat__svg svg-" + image_url)
+				use(xlink:href="#svg-" + image_url)
+		p(class="cat-item__number") #{number}
+	p(class="cat-item__category") #{category}
+	p(class="cat-item__price") #{price}

@@ -1,0 +1,84 @@
+include ../_mixins/_PictureImg
+block variables
+
+section(class="g-section footer")
+	div(class="g-content g-content-footer")
+		div(class="footer-wrapper")
+			div(class="footer-form-wrap")
+				div(class="footer-form-image")
+					-
+						var list = [ 
+							{ 
+								link:"./../../images/trial-order", 
+								link_format: ".jpg",
+								alt_text: "Пробная доставка", 
+							}
+							]
+					each item in list
+							div(class="footer-picture__image")
+								+PictureImg(item.link, item.link_format, item.alt_text)
+				div(class="footer-form-content")
+					h2(class="form-content__title") Пробная доставка
+					div(class="form-content__form")
+						form
+							div(class="form-row")
+								div(class="form-group col-md-6 form-group-mr")
+									label(class="form__label") 
+									input(class="form__input form-control" placeholder="Дата")
+									svg(class="svg-calendar-icon")
+										use(xlink:href="#svg-calendar-icon")
+								div(class="form-group col-md-6")
+									label(class="form__label2") 
+									input(class="form__input2 form-control" placeholder="Время")
+									svg(class="svg-calendar-icon")
+										use(xlink:href="#svg-calendar-icon")
+								div(class="form-group col-md-6")
+									label(class="form__label") 
+									input(class="form__input form-control" placeholder="Количество персон")
+								div(class="form-group col-md-6")
+									label(class="form__label2") 
+									input(class="form__input2 form-control" placeholder="Телефонный номер")
+						a(class="form-content__link link") Заказать сейчас
+			div(class="footer-content-wrap")
+				div(class="footer-content-top")
+					div(class="content-top-main")
+						h2(class="top-main__title")
+							| Эко
+							span(class="header__logo--green") фуд
+						p(class="top-main__desc") Ресторан, который поможет правильно питаться, взять еду на вынос и заказать доставку. Не тратьте время на подсчёт калорий и готовку. Мы сделаем это за вас!
+						div(class="top-main__icons") 
+							a(href="https://www.instagram.com/" class="svg-instagram-icons")
+								svg(class="svg-instagram-icon svg-foot-icon")
+									use(xlink:href="#svg-instagram-icon")
+							a(href="https://ru-ru.facebook.com/" class="svg-facebook-icons")
+								svg(class="svg-facebook-icon svg-foot-icon") 
+									use(xlink:href="#svg-facebook-icon")
+							a(href="https://twitter.com/" class="svg-twitter-icons")
+								svg(class="svg-twitter-icon svg-foot-icon")
+									use(xlink:href="#svg-twitter-icon")
+					div(class="content-top-contacts")
+						h4(class="top-address__title") Экофуд
+						div(class="content-top-address")
+							p(class="content-top__address1")
+								|02002, Украина, Киев,
+								br
+								|Никольсько-Слободская, 2В
+							p(class="content-top__address2")
+								|+38 067 876 54 32
+								br
+								|www.ecofood.com
+						div(class="content-top-working-hours")
+							p(class="content-top__working-hours1")
+								|Понедельник — пятница
+								br
+								|9:00 АМ — 11:00 РМ
+							p(class="content-top__working-hours2")
+								|Суббота — воскресенье
+								br
+								|10:00 АМ — 12:00 РМ
+					div(class="content-top-email")
+						h4(class="top-email__title") Написать нам
+						p(class="top-email__address") info@ecofood.com
+				div(class="footer-content-bottom")
+					div(class="footer-content-bottom__line")
+					p(class="footer-content-bottom__desc") Все права защищены. 2020 Экофуд

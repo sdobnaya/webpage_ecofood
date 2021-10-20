@@ -1,0 +1,35 @@
+include ../_mixins/_testCards
+
+section(class="g-section test")
+	div(class="g-content g-content-test")
+		div(class="test-titles")
+			h3(class="test__small-title") Отзывы
+			h2(class="test__main-title") Наши счастливые клиенты
+		div(class="test-cards-wrapper")
+			-
+				var list = [ 
+					{ 
+						image:"./../../images/Svetlana.webp",  
+						name: "Светлана",
+						category: "Клиент", 
+						text: "Хочу выразить огромную благодарность поварам и сотрудникам Экофуд. Все очень вкусно и полезно. А пряный булгур с овощами и орешками просто сводит с ума!)) Хочется кушать и кушать) снова и снова )", 
+					}, 
+					{ 
+						image:"./../../images/Snezhana.webp", 
+						name: "Снежана",
+						category: "Клиент", 
+						text: "Недавнее открытие! Очень позитивно-полезное место!! Индивидуальный подход к каждому клиенту, приятный персонал. Выбор фруктово-овощных коктейлей и лимонадов зашкаливает. Настоятельно рекомендую всем любителям живой пищи.", 
+					},
+					]
+			each item in list
+					div(class="test-content-item")
+						+testCards(item.image, item.name, item.category, item.text)
+		div(class="card-content__dot")
+			svg(class="svg-black-circle")
+				use(xlink:href="#svg-black-circle")
+			svg(class="svg-black-circle")
+				use(xlink:href="#svg-black-circle")
+			svg(class="svg-black-circle")
+				use(xlink:href="#svg-black-circle")
+			svg(class="svg-black-circle")
+				use(xlink:href="#svg-black-circle")

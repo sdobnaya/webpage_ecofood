@@ -1,0 +1,25 @@
+mixin testCards(image_url, name, category, text)
+	- mod = mod || ''
+		div(class="test-card")
+			div(class="test-card-top")
+				div(class="card-top-img-wrap")
+					img(class="card-top__image" src="images/" + image_url) 
+				div(class="card-top-client-info")
+					p(class="card-top__name") #{name}
+					p(class="card-top__category") #{category}
+				svg(class="svg-quote-icon")
+					use(xlink:href="#svg-quote-icon")
+			div(class="test-card-bottom")
+				div(class="test-card__rate")
+					svg(class="svg-star-icon svg-menu")
+						use(xlink:href="#svg-star-icon")
+					svg(class="svg-star-icon svg-menu")
+						use(xlink:href="#svg-star-icon")
+					svg(class="svg-star-icon svg-menu")
+						use(xlink:href="#svg-star-icon")
+					svg(class="svg-star-icon svg-menu")
+						use(xlink:href="#svg-star-icon")
+					svg(class="svg-star-icon svg-menu")
+						use(xlink:href="#svg-star-icon")
+				div(class="test-card__line")
+				p(class="test-card__text") #{text}

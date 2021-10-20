@@ -1,0 +1,33 @@
+
+include ../_mixins/_menuCardsDesc
+
+-
+	var list = [
+		{ 
+			image:"./../../images/caramel-popcorn.webp", 
+			name: "Карамельный попкорн",
+			category: "Снеки", 
+			testimonials: "17 отзывов", 
+		},
+		{
+			image:"./../../images/lactose-free-ice-cream.webp", 
+			name: "Мороженое без лактозы",
+			category: "Мороженое", 
+			testimonials: "26 отзывов", 
+		},
+		{
+			image:"./../../images/kombucha.webp", 
+			name: "Комбуча",
+			category: "Напитки", 
+			testimonials: "12 отзывов", 
+		},
+		{
+			image:"./../../images/cheese-cake.webp", 
+			name: "Сырники",
+			category: "Дессерты", 
+			testimonials: "60 отзывов", 
+		}
+		]
+each item in list
+		div(class="menu-cards__card")
+			+menuCardsDesc(item.image, item.name, item.category, item.testimonials)

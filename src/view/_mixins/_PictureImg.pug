@@ -1,0 +1,5 @@
+mixin PictureImg(link, link_format, alt_text)
+	- mod = mod || ''
+	picture
+		source(srcset=link + ".webp" type="image/webp")
+		img(src=link + link_format alt=alt_text)

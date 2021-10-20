@@ -1,0 +1,48 @@
+include ../_mixins/_pictureImgGal	
+	-
+		var list = [ 
+			{ 
+				link:"./../../images/gallery-1", 
+				link_format: ".jpg",
+				alt_text: "Пример блюда 1", 
+			}
+			]
+	each item in list
+			div(class="gal-picture__image gal-picture__overlay")
+				+pictureImgGal(item.link, item.link_format, item.alt_text)
+div(class="gal-grid__item gal-item_1")
+	-
+		var list = [ 
+			{ 
+				link:"./../../images/gallery-3", 
+				link_format: ".jpg",
+				alt_text: "Пример блюда 2", 
+			}
+			]
+	each item in list
+			div(class="gal-picture__image gal-picture__overlay")
+				+pictureImgGal(item.link, item.link_format, item.alt_text)
+div(class="gal-grid__item gal-item_2")
+	-
+		var list = [ 
+			{ 
+				link:"./../../images/gallery-2", 
+				link_format: ".jpg",
+				alt_text: "Пример блюда 3", 
+			}
+			]
+	each item in list
+			div(class="gal-picture__image gal-picture__overlay")
+				+pictureImgGal(item.link, item.link_format, item.alt_text)
+div(class="gal-grid__item gal-item_3")
+	-
+		var list = [ 
+			{ 
+				link:"./../../images/gallery-4", 
+				link_format: ".jpg",
+				alt_text: "Пример блюда 4", 
+			}
+			]
+	each item in list
+			div(class="gal-picture__image gal-picture__overlay")
+				+pictureImgGal(item.link, item.link_format, item.alt_text)

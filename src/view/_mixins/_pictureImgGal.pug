@@ -1,0 +1,11 @@
+mixin pictureImgGal(link, link_format, alt_text)
+
+	- mod = mod || ''
+	picture
+		source(srcset=link + ".webp" type="image/webp")
+		img(class="gal-grid__img" src=link + link_format alt=alt_text)
+
+		//		div(class="gal-picture__overlay")
+
+
+

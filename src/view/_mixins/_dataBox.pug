@@ -1,0 +1,14 @@
+block variables
+
+mixin dataBox(image_url, number, title, desc)
+	- mod = mod || ''
+	div(class="item card")
+		a(href="#")
+			div(class="ap-image-wrap")
+				img(class="card-img-top" src="images/" + image_url) 
+				div(class="number ap__number ap_try") #{number}
+		div(class="card-body")
+			div(class="card-body-top")
+				p(class="card-title") #{title}
+				p(class="card-text mb-2") #{desc}
+			a(class="btn btn-primary btn-room-w") Подробнее

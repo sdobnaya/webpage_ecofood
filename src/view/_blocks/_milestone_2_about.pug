@@ -1,0 +1,30 @@
+include ../_mixins/_PictureImg
+block variables
+
+
+section(class="g-section about")
+	div(class="g-content g-content-about")
+		div(class="about-wrapper")
+			div(class="about-picture")
+				div(class="picture-wrapper")
+					div(class="about-picture__shade")
+					div(class="about-picture__img")
+						-
+							var list = [ 
+								{ 
+									link:"./../../images/about-us", 
+									link_format: ".jpg",
+									alt_text: "Салат с морепродуктами", 
+								}
+								]
+						each item in list
+								div(class="about-picture__image")
+									+PictureImg(item.link, item.link_format, item.alt_text)
+			div(class="about-desc")
+				p(class="about-desc__small-title") О нас
+				h2(class="about-desc__main-title") 
+					|Уникальный концепт
+					|здорового питания
+				div(class="about-desc__line")
+				p(class="about-desc__text") Особый подход к кулинарии — симбиоз современного кулинарного искусства и индивидуального таланта повара- диетолога, превращает процесс приготовления пищи в настоящее священнодействие.
+				a(class="about-link link") Заказать сейчас

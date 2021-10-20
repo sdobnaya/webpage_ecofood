@@ -1,0 +1,51 @@
+include ../_mixins/_MenuLink
+
+block variables
+
+section(class="g-section intro")
+	div(class="g-content g-content-intro")
+		nav(class="header")
+			a(class="header__logo" href="#")
+				| Эко
+				span(class="header__logo--green") фуд
+			div(class="menu-wrapper")
+				ul(class="menu-list")
+					- var list = [ "Главная", "Меню", "Эксперты", "Контакты", "Найти" ]
+					each item in list
+						li(class="list__item list__item--hide")
+							+MenuLink(item)
+					li(class="list__item menu-burger")
+						svg(class="svg-menu-burger")
+							use(xlink:href="#svg-menu-burger")
+				div(class="menu-search")
+					input(placeholder="Поиск" class="menu-search__input")
+					div(class="svg-search-icon")
+						svg(class="svg-search__icon")
+							use(xlink:href="#svg-search-icon")
+		div(class="intro-content-wrapper")
+			div(class="desc-content")
+				h1(class="intro-desc__header") 
+					|Натуральная еда 
+					br
+					|и напитки
+				p(class="intro-desc__text") Натуральная пища, функциональные продукты, эко кейтеринг, авторская кухня диетолога, фитопрепараты, лечебно-оздоровительные рецепты и меню, органические продукты.
+				div(class="intro-desc-links")
+					a(class="link link-intro") Заказать сейчас
+					a(class="link-grey") Наша история
+					a(class="svg-play-icon") 
+						svg(class="svg-play__icon")
+							use(xlink:href="#svg-play-icon")
+			div(class="cards-content")
+				div(class="slider_slik")
+					include ../_blocks/_mainCards
+			div(class="card-content__dots")
+				
+
+					
+
+					
+
+
+
+				
+

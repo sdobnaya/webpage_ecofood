@@ -1,0 +1,144 @@
+.g-content-cat{
+	padding: 73px 135px 100px;
+
+	@media(max-width: 1280px){
+		padding:42px  110px 100px;
+	}
+
+	@media(max-width: 992px){
+		padding:40px  20px 50px;
+	}
+}
+
+.cat__small-title{
+	border-radius: 4px;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 8px 25px;
+	display: inline-block;
+	color: #4F4F4F;
+	font-size: 16px;
+	margin-bottom: 16px;
+	text-align: center;
+}
+
+.cat-title-wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cat__main-title{
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 66px;
+	margin-bottom: 42px;
+
+	@media(max-width: 1280px){
+		font-size: 44px;
+		line-height: 60px;
+		margin-bottom: 56px;
+	}
+
+	@media(max-width: 992px){
+		font-size: 26px;
+		line-height: 33px;
+		margin-bottom: 45px;
+	}
+}
+
+.cat-content-items{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-column-gap: 30px;
+
+	@media(max-width: 1280px){
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr 1fr;
+		grid-column-gap: 87px;
+		grid-row-gap: 50px;
+	}
+
+	@media(max-width: 992px){
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 20px;
+		grid-row-gap: 25px;
+	}
+}
+
+
+.cat__svg{
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	left: 25px;
+	top: 25px;
+}
+
+.cat-item-img-wrap{
+	background-color: #fff;
+	width: 84px;
+	height: 84px;
+	border-radius: 50%;
+	margin: 27px auto 32px;
+	position: relative;
+
+	@media (max-width:992px){
+		margin: 25px auto ;
+	}
+}
+
+.cat-item__number{
+	text-align: end;
+	position: relative;
+	z-index: 2;
+	font-size:12px;
+	line-height: 15px;
+	color: #fff;
+	line-height: 29px;
+
+}
+
+.cat-item__number:before{
+	content: '';
+	display: block;
+	position: absolute;
+	right: -8px;
+	z-index: -1;
+	background-color: #27AE60;
+	min-width: 30px;
+	min-height: 30px;
+	border-radius: 50%;
+}
+
+.cat-item__category{
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;
+	margin-bottom:10px;
+
+	@media (max-width:992px){
+		margin-bottom:0px;
+	}
+}
+
+.cat-item__price{
+	font-size: 14px;
+	opacity: 0.7;
+	line-height: 19px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.cat-content-item{
+	background-color: #F9F9F9;
+	border-radius: 8px;
+	transition: linear 0.5s;
+
+	&:hover,&:focus{
+		background-color: #27AE60;
+		cursor: pointer;
+		color: #fff;
+		opacity: 1;
+	}
+}

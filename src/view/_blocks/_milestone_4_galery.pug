@@ -1,0 +1,64 @@
+include ../_mixins/_pictureImgGal
+block variables
+
+section(class="g-section galery")
+	div(class="g-content g-content-galery")
+		div(class="galery-wrapper")
+			div(class="gal-desc-wrapper")
+				h2(class="gal-desc__title")
+					|Наша галерея
+					br
+					|от клиентов
+				div(class="gal-desc__line")
+				p(class="gal-desc__text") Экофуд делает доставку здоровой еды из экологически чистых и полезных продуктов в любую точку города и области.
+				a(class="link gal-desc__link") Заказать сейчас
+			div(class="gal-img-wrapper")
+				div(class="gal-grid-items")
+					div(class="gal-grid__item gal-item_4")
+						-
+							var list = [ 
+								{ 
+									link:"./../../images/gallery-1", 
+									link_format: ".jpg",
+									alt_text: "Пример блюда 1", 
+								}
+								]
+						each item in list
+								div(class="gal-picture__image")
+									+pictureImgGal(item.link, item.link_format, item.alt_text)
+					div(class="gal-grid__item gal-item_1")
+						-
+							var list = [ 
+								{ 
+									link:"./../../images/gallery-3", 
+									link_format: ".jpg",
+									alt_text: "Пример блюда 2", 
+								}
+								]
+						each item in list
+								div(class="gal-picture__image")
+									+pictureImgGal(item.link, item.link_format, item.alt_text)
+					div(class="gal-grid__item gal-item_2")
+						-
+							var list = [ 
+								{ 
+									link:"./../../images/gallery-2", 
+									link_format: ".jpg",
+									alt_text: "Пример блюда 3", 
+								}
+								]
+						each item in list
+								div(class="gal-picture__image")
+									+pictureImgGal(item.link, item.link_format, item.alt_text)
+					div(class="gal-grid__item gal-item_3")
+						-
+							var list = [ 
+								{ 
+									link:"./../../images/gallery-4", 
+									link_format: ".jpg",
+									alt_text: "Пример блюда 4", 
+								}
+								]
+						each item in list
+								div(class="gal-picture__image")
+									+pictureImgGal(item.link, item.link_format, item.alt_text)
