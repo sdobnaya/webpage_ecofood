@@ -1,6 +1,6 @@
-# Responsive page for online market (HTML/SCSS/Gulp/Pug)
+# Responsive page (HTML/SCSS/Gulp/Pug)
 
-A responsive page with no logic, but with a handsome design :)
+A responsive page for the online market with no logic, but with a handsome design :)
 
 To run this on your PC you need to do the following:
 
